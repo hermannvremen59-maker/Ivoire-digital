@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Mon Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivoire Digital - Transformation Numérique</title>
+    <style>
+        /* CSS Simple et Moderne */
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; color: #333; }
+        header { background: #004d99; color: white; padding: 20px; text-align: center; }
+        nav { background: #f4f4f4; padding: 10px; text-align: center; }
+        
+        /* Carrousel */
+        .carousel { width: 100%; height: 300px; background: #ddd; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+        .slide { display: none; width: 100%; text-align: center; font-size: 24px; font-weight: bold; }
+        .slide.active { display: block; }
+
+        /* Services */
+        .services { padding: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; text-align: center; }
+    </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon site</h1>
-    <p>Ceci est ma première page web.</p>
+
+<header>
+    <h1>Ivoire Digital</h1>
+    <p>Votre partenaire pour la réussite numérique en Côte d'Ivoire</p>
+</header>
+
+<nav>
+    <a href="#">Accueil</a> | <a href="#services">Nos Services</a> | <a href="#contact">Contact</a>
+</nav>
+
+<div class="carousel" id="carousel">
+    <div class="slide active">Bienvenue chez Ivoire Digital</div>
+    <div class="slide">Expertise en Développement Web</div>
+    <div class="slide">Marketing Digital & Stratégie</div>
+</div>
+
+<section class="services" id="services">
+    <div class="card"><h3>Développement Web</h3><p>Sites sur mesure et applications performantes.</p></div>
+    <div class="card"><h3>Marketing Digital</h3><p>Boostez votre visibilité en ligne.</p></div>
+    <div class="card"><h3>Design Graphique</h3><p>Identité visuelle et logos professionnels.</p></div>
+</section>
+
+<script>
+    // Script simple pour faire tourner le carrousel
+    let index = 0;
+    const slides = document.querySelectorAll('.slide');
+    function changeSlide() {
+        slides.forEach(s => s.classList.remove('active'));
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }
+    setInterval(changeSlide, 3000);
+</script>
+
 </body>
 </html>
