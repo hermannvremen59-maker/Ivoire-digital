@@ -3,119 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivoire Digital - Accueil</title>
+    <title>Ivoire Digital | Excellence Numérique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        * { box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-        header { background: #004d99; color: white; padding: 30px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 36px; }
-        nav { background: #333; padding: 15px 0; text-align: center; }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-size: 18px; font-weight: bold; }
-        nav a:hover { color: #80b3ff; }
-        
-        .hero { padding: 80px 20px; background: #e6f2ff; text-align: center; }
-        .hero h2 { font-size: 42px; margin-bottom: 20px; color: #004d99; }
-        .hero p { font-size: 20px; max-width: 800px; margin: 0 auto 30px; }
-        .btn { background: #004d99; color: white; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 5px; font-weight: bold; }
-        .btn:hover { background: #003366; }
-        
-        .services { padding: 80px 20px; text-align: center; background: #fff; }
-        .services h2 { font-size: 36px; margin-bottom: 40px; }
-        .services-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
-        .card { background: #f9f9f9; padding: 30px; width: 350px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { color: #004d99; font-size: 24px; margin-bottom: 15px; }
-        
-        .logo-carousel { padding: 50px 0; background: #f9f9f9; overflow: hidden; white-space: nowrap; border-top: 1px solid #ddd; }
-        .logo-slide { display: inline-block; animation: scroll 20s linear infinite; }
-        .logo-slide img { height: 50px; margin: 0 40px; opacity: 0.7; filter: grayscale(1); transition: 0.3s; }
-        .logo-slide img:hover { opacity: 1; filter: grayscale(0); }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+        :root { --primary: #00d1ff; --bg: #020617; --card: #0f172a; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: #f8fafc; margin: 0; }
 
-        .logo-creation { padding: 60px 20px; background: #f2f9ff; text-align: center; border-top: 1px solid #cce1ff; border-bottom: 1px solid #cce1ff; }
-        .logo-creation h2 { font-size: 32px; color: #004d99; margin-bottom: 20px; }
-        .whatsapp-btn { background: #25d366; color: white; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 50px; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
-        .whatsapp-btn:hover { background: #128c7e; transform: scale(1.05); }
-        .whatsapp-btn img { width: 24px; height: 24px; }
+        /* Hero section avec image de fond */
+        .hero { 
+            height: 80vh; background: linear-gradient(rgba(2,6,23,0.8), rgba(2,6,23,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');
+            background-size: cover; background-position: center; display: flex; flex-direction: column; 
+            justify-content: center; align-items: center; text-align: center; padding: 20px;
+        }
+        h1 { font-size: 60px; color: var(--primary); text-transform: uppercase; margin-bottom: 10px; }
+        
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        
+        .card { 
+            background: var(--card); padding: 40px; border-radius: 20px; 
+            border: 1px solid #1e293b; transition: 0.4s; text-align: center;
+        }
+        .card:hover { border-color: var(--primary); transform: translateY(-10px); }
+        .card i { font-size: 50px; color: var(--primary); margin-bottom: 20px; }
 
-        footer { background: #333; color: white; text-align: center; padding: 25px 0; margin-top: 50px; }
-        footer p { margin: 0; }
+        /* Section Logo WhatsApp */
+        .cta-section { 
+            background: linear-gradient(135deg, #0f172a, #1e293b); padding: 80px 20px; 
+            text-align: center; border-radius: 30px; margin: 50px auto; border: 1px solid var(--primary);
+        }
+        .whatsapp-btn { 
+            background: #25d366; color: white; padding: 20px 40px; text-decoration: none; 
+            border-radius: 50px; font-size: 20px; font-weight: bold; display: inline-flex; align-items: center; gap: 15px; 
+        }
+
+        footer { background: #000; padding: 40px 20px; text-align: center; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Ivoire Digital</h1>
-        <p>Votre partenaire pour la réussite numérique en Côte d'Ivoire</p>
-    </header>
+    <section class="hero">
+        <h1>IVOIRE DIGITAL</h1>
+        <p style="font-size: 24px;">Architectes de votre transformation numérique</p>
+    </section>
 
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div id="accueil" class="hero">
-        <h2>Propulsez Votre Entreprise vers l'Avenir</h2>
-        <p>Nous accompagnons les entreprises ivoiriennes dans leur transition numérique avec des solutions sur mesure et performantes.</p>
-        <a href="#services" class="btn">Découvrir Nos Services</a>
-    </div>
-
-    <!-- Section Services Détaillés -->
-    <div id="services" class="services">
-        <h2>Nos Solutions Digitales</h2>
-        <div class="services-grid">
-            <div class="card">
-                <h3>Développement Web</h3>
-                <p>Création de sites internet modernes, rapides, et adaptés à tous les écrans pour valoriser vos services.</p>
-            </div>
-            <div class="card">
-                <h3>Marketing Digital & Stratégie</h3>
-                <p>Augmentez votre visibilité et touchez votre cœur de cible grâce à des campagnes ciblées et efficaces.</p>
-            </div>
-            <div class="card">
-                <h3>Design Graphique</h3>
-                <p>Une identité visuelle unique et professionnelle pour démarquer votre marque de la concurrence.</p>
-            </div>
-            <div class="card">
-                <h3>Community Management</h3>
-                <p>Gestion et animation de vos réseaux sociaux pour bâtir une communauté engagée autour de votre marque.</p>
-            </div>
-            <div class="card">
-                <h3>Référencement (SEO)</h3>
-                <p>Optimisation de votre site pour apparaître en première position sur les moteurs de recherche.</p>
-            </div>
-            <div class="card">
-                <h3>Création de Contenu</h3>
-                <p>Rédaction de textes, production de vidéos et de visuels percutants pour votre communication.</p>
-            </div>
+    <div class="container">
+        <h2 style="text-align:center; font-size: 40px; margin-bottom: 50px;">Nos Solutions</h2>
+        <div class="grid">
+            <div class="card"><i class="fa-solid fa-laptop-code"></i><h3>Web & Mobile</h3><p>Sites vitrines modernes et applications sur mesure.</p></div>
+            <div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>Marketing Digital</h3><p>SEO et publicités ciblées pour votre croissance.</p></div>
+            <div class="card"><i class="fa-solid fa-palette"></i><h3>Design & Branding</h3><p>Identité visuelle, logos et chartes graphiques.</p></div>
         </div>
-    </div>
 
-    <!-- Carrousel de Logos -->
-    <div class="logo-carousel">
-        <div class="logo-slide">
-            <img src="logo1.png" alt="Partenaire 1">
-            <img src="logo2.png" alt="Partenaire 2">
-            <img src="logo3.png" alt="Partenaire 3">
-            <img src="logo4.png" alt="Partenaire 4">
-            <img src="logo5.png" alt="Partenaire 5">
-            <img src="logo1.png" alt="Partenaire 1">
-            <img src="logo2.png" alt="Partenaire 2">
-            <img src="logo3.png" alt="Partenaire 3">
-            <img src="logo4.png" alt="Partenaire 4">
-            <img src="logo5.png" alt="Partenaire 5">
-        </div>
-    </div>
-
-    <!-- Section Création de Logo -->
-    <div class="logo-creation">
-        <h2>Envie d'une Identité Visuelle Unique ?</h2>
-        <p>Concevons ensemble le logo parfait pour représenter votre entreprise et marquer les esprits.</p>
-        <a href="https://wa.me/votre_numero" class="whatsapp-btn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo WhatsApp">
-            Créer votre logo sur WhatsApp
-        </a>
+        <section class="cta-section">
+            <h2>Besoin d'un logo unique ?</h2>
+            <p style="margin-bottom: 30px;">Commandez votre identité visuelle via WhatsApp</p>
+            <a href="https://wa.me/votre_numero" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> Créer mon logo</a>
+        </section>
     </div>
 
     <footer>
