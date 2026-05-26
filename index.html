@@ -2,18 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ivoire Digital | Excellence Numérique</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #00d1ff; --bg: #020617; --card: #0f172a; --text: #f8fafc; }
         body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); margin: 0; }
-        nav { background: #000; padding: 20px; text-align: center; border-bottom: 2px solid var(--primary); }
-        nav a { color: white; margin: 0 20px; text-decoration: none; font-weight: bold; }
-        .hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(2,6,23,0.9), rgba(2,6,23,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80'); background-size: cover; }
-        .section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+        nav { background: rgba(0,0,0,0.9); padding: 25px; text-align: center; border-bottom: 1px solid var(--primary); }
+        nav a { color: var(--text); margin: 0 20px; text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 2px; }
+        .hero { padding: 100px 20px; text-align: center; background: linear-gradient(rgba(2,6,23,0.9), rgba(2,6,23,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80'); background-size: cover; }
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid #1e293b; transition: 0.3s; }
-        footer { background: #000; padding: 50px; text-align: center; border-top: 2px solid var(--primary); }
+        .card { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid #1e293b; transition: 0.4s; }
+        .card:hover { border-color: var(--primary); transform: translateY(-10px); }
+        footer { background: #000; padding: 40px; text-align: center; border-top: 1px solid #333; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -23,27 +25,38 @@
         <a href="contact.html">CONTACT</a>
     </nav>
     <section class="hero">
-        <h1>IVOIRE DIGITAL</h1>
+        <h1 style="font-size: 3rem; color: var(--primary);">IVOIRE DIGITAL</h1>
         <p>Architectes de votre transformation numérique en Côte d'Ivoire.</p>
     </section>
-    <section class="section">
-        <h2>Nos Solutions Digitales</h2>
+    <div class="container">
+        <h2 style="text-align:center;">Nos Solutions Digitales</h2>
         <div class="grid">
             <div class="card"><h3>Web & Mobile</h3><p>Sites vitrines et applications sur mesure.</p></div>
             <div class="card"><h3>Marketing Digital</h3><p>Référencement SEO et publicités ciblées.</p></div>
             <div class="card"><h3>Design & Branding</h3><p>Identité visuelle et logos uniques.</p></div>
         </div>
-    </section>
-    <footer>
-        <p>Ivoire Digital © 2026 | Abidjan, Côte d'Ivoire</p>
-    </footer>
+    </div>
+    <footer><p>Ivoire Digital © 2026 | Abidjan, Côte d'Ivoire</p></footer>
 </body>
 </html><!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8"><title>Nos Services | Ivoire Digital</title></head>
-<body style="background:#020617; color:white; font-family:sans-serif;">
-    <nav style="background:#000; padding:20px; text-align:center;"><a href="index.html" style="color:white; margin:0 15px;">ACCUEIL</a><a href="services.html" style="color:white; margin:0 15px;">SERVICES</a></nav>
-    <div style="padding:50px; max-width:800px; margin:auto;">
+<head>
+    <meta charset="UTF-8">
+    <title>Nos Services | Ivoire Digital</title>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #020617; color: #f8fafc; margin: 0; }
+        nav { background: rgba(0,0,0,0.9); padding: 25px; text-align: center; border-bottom: 1px solid #00d1ff; }
+        nav a { color: #f8fafc; margin: 0 20px; text-decoration: none; font-weight: 600; }
+        .content { max-width: 900px; margin: 50px auto; padding: 40px; background: #0f172a; border-radius: 20px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="services.html">NOS SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="content">
         <h2>Détail de nos activités</h2>
         <h3>Développement Web</h3><p>Nous créons des plateformes robustes...</p>
         <h3>Marketing & Communication</h3><p>Nous boostons votre visibilité...</p>
@@ -52,13 +65,26 @@
 </body>
 </html><!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8"><title>Contact | Ivoire Digital</title></head>
-<body style="background:#020617; color:white; font-family:sans-serif;">
-    <nav style="background:#000; padding:20px; text-align:center;"><a href="index.html" style="color:white; margin:0 15px;">ACCUEIL</a><a href="contact.html" style="color:white; margin:0 15px;">CONTACT</a></nav>
-    <div style="padding:50px; text-align:center;">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Ivoire Digital</title>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #020617; color: #f8fafc; margin: 0; }
+        nav { background: rgba(0,0,0,0.9); padding: 25px; text-align: center; border-bottom: 1px solid #00d1ff; }
+        nav a { color: #f8fafc; margin: 0 20px; text-decoration: none; font-weight: 600; }
+        .contact-box { text-align: center; margin-top: 100px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="services.html">NOS SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="contact-box">
         <h2>Contactez-nous</h2>
-        <p>Email : contact@ivoiredigital.ci</p>
-        <p>WhatsApp : +225 07 00 00 00 00</p>
+        <p>Email : info@ivoiredigital.ci</p>
+        <p>WhatsApp : +225 05 74 99 96 75</p>
     </div>
 </body>
 </html>
