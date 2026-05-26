@@ -6,64 +6,64 @@
     <title>Ivoire Digital | Excellence Numérique</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root { --primary: #00d1ff; --bg: #020617; --card: #0f172a; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: #f8fafc; margin: 0; }
-
-        /* Hero section avec image de fond */
-        .hero { 
-            height: 80vh; background: linear-gradient(rgba(2,6,23,0.8), rgba(2,6,23,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');
-            background-size: cover; background-position: center; display: flex; flex-direction: column; 
-            justify-content: center; align-items: center; text-align: center; padding: 20px;
-        }
-        h1 { font-size: 60px; color: var(--primary); text-transform: uppercase; margin-bottom: 10px; }
+        :root { --primary: #00d1ff; --bg: #020617; --card: #0f172a; --text: #f8fafc; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; }
         
-        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+        h2 { font-size: 45px; text-align: center; color: var(--primary); margin-bottom: 50px; }
         
-        .card { 
-            background: var(--card); padding: 40px; border-radius: 20px; 
-            border: 1px solid #1e293b; transition: 0.4s; text-align: center;
-        }
+        /* Hero */
+        .hero { height: 70vh; background: linear-gradient(rgba(2,6,23,0.9), rgba(2,6,23,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80'); background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        
+        /* Grilles et Cartes */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid #1e293b; transition: 0.3s; }
         .card:hover { border-color: var(--primary); transform: translateY(-10px); }
-        .card i { font-size: 50px; color: var(--primary); margin-bottom: 20px; }
+        .card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
 
-        /* Section Logo WhatsApp */
-        .cta-section { 
-            background: linear-gradient(135deg, #0f172a, #1e293b); padding: 80px 20px; 
-            text-align: center; border-radius: 30px; margin: 50px auto; border: 1px solid var(--primary);
-        }
-        .whatsapp-btn { 
-            background: #25d366; color: white; padding: 20px 40px; text-decoration: none; 
-            border-radius: 50px; font-size: 20px; font-weight: bold; display: inline-flex; align-items: center; gap: 15px; 
-        }
+        /* Stats & Process */
+        .stats { display: flex; justify-content: space-around; text-align: center; background: #0b1120; padding: 50px; margin: 50px 0; border-radius: 20px; }
+        .stat-item { font-size: 40px; font-weight: bold; color: var(--primary); }
 
-        footer { background: #000; padding: 40px 20px; text-align: center; border-top: 1px solid #333; }
+        /* Footer */
+        footer { background: #000; padding: 60px 20px; border-top: 2px solid var(--primary); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .whatsapp-btn { background: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
     </style>
 </head>
 <body>
 
     <section class="hero">
         <h1>IVOIRE DIGITAL</h1>
-        <p style="font-size: 24px;">Architectes de votre transformation numérique</p>
+        <p style="font-size: 22px;">Architectes de votre transformation numérique en Côte d'Ivoire</p>
     </section>
 
-    <div class="container">
-        <h2 style="text-align:center; font-size: 40px; margin-bottom: 50px;">Nos Solutions</h2>
+    <section class="section" id="services">
+        <h2>Nos Solutions Digitales</h2>
         <div class="grid">
-            <div class="card"><i class="fa-solid fa-laptop-code"></i><h3>Web & Mobile</h3><p>Sites vitrines modernes et applications sur mesure.</p></div>
-            <div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>Marketing Digital</h3><p>SEO et publicités ciblées pour votre croissance.</p></div>
+            <div class="card"><i class="fa-solid fa-laptop-code"></i><h3>Web & Mobile</h3><p>Sites vitrines, E-commerce et applications sur mesure.</p></div>
+            <div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>Marketing Digital</h3><p>Référencement SEO et publicités ciblées.</p></div>
             <div class="card"><i class="fa-solid fa-palette"></i><h3>Design & Branding</h3><p>Identité visuelle, logos et chartes graphiques.</p></div>
+            <div class="card"><i class="fa-solid fa-users-gear"></i><h3>Community Management</h3><p>Gestion de vos réseaux sociaux pour bâtir une communauté.</p></div>
+            <div class="card"><i class="fa-solid fa-graduation-cap"></i><h3>Formation</h3><p>Coaching sur les outils digitaux pour dirigeants.</p></div>
+            <div class="card"><i class="fa-solid fa-pen-nib"></i><h3>Création de Contenu</h3><p>Rédaction, vidéos et visuels percutants.</p></div>
         </div>
+    </section>
 
-        <section class="cta-section">
-            <h2>Besoin d'un logo unique ?</h2>
-            <p style="margin-bottom: 30px;">Commandez votre identité visuelle via WhatsApp</p>
-            <a href="https://wa.me/votre_numero" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> Créer mon logo</a>
-        </section>
+    <div class="stats">
+        <div><div class="stat-item">100+</div><p>Projets Réussis</p></div>
+        <div><div class="stat-item">95%</div><p>Satisfaction Client</p></div>
+        <div><div class="stat-item">24/7</div><p>Accompagnement</p></div>
     </div>
 
+    <section class="section" style="text-align:center;">
+        <h2>Envie d'une identité unique ?</h2>
+        <a href="https://wa.me/votre_numero" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> Créer mon logo sur WhatsApp</a>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Ivoire Digital - Tous droits réservés.</p>
+        <div><h3>IVOIRE DIGITAL</h3><p>Le partenaire de votre croissance numérique à Abidjan.</p></div>
+        <div><h3>CONTACT</h3><p>Abidjan, Côte d'Ivoire</p><p>contact@ivoiredigital.ci</p><p>+225 07 00 00 00 00</p></div>
+        <div><h3>SUIVEZ-NOUS</h3><p>Facebook | LinkedIn | Instagram</p></div>
     </footer>
 
 </body>
