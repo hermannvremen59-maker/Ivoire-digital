@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root { --primary: #00d1ff; --bg: #020617; --card: #0f172a; --text: #f8fafc; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; }
-        
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
         .section { padding: 80px 20px; max-width: 1200px; margin: auto; }
-        h2 { font-size: 45px; text-align: center; color: var(--primary); margin-bottom: 50px; }
+        h2 { font-size: 45px; text-align: center; color: var(--primary); margin-bottom: 50px; text-transform: uppercase; }
         
         /* Hero */
-        .hero { height: 70vh; background: linear-gradient(rgba(2,6,23,0.9), rgba(2,6,23,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80'); background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero { height: 80vh; background: linear-gradient(rgba(2,6,23,0.9), rgba(2,6,23,0.9)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80'); background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
         
         /* Grilles et Cartes */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -22,42 +21,43 @@
         .card i { font-size: 40px; color: var(--primary); margin-bottom: 20px; }
 
         /* Stats & Process */
-        .stats { display: flex; justify-content: space-around; text-align: center; background: #0b1120; padding: 50px; margin: 50px 0; border-radius: 20px; }
-        .stat-item { font-size: 40px; font-weight: bold; color: var(--primary); }
+        .stats { display: flex; justify-content: space-around; text-align: center; background: #0b1120; padding: 60px; margin: 50px 0; border-radius: 20px; }
+        .stat-item { font-size: 50px; font-weight: bold; color: var(--primary); }
 
         /* Footer */
         footer { background: #000; padding: 60px 20px; border-top: 2px solid var(--primary); display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .whatsapp-btn { background: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; }
+        .whatsapp-btn { background: #25d366; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; margin-top: 20px; }
     </style>
 </head>
 <body>
 
     <section class="hero">
-        <h1>IVOIRE DIGITAL</h1>
-        <p style="font-size: 22px;">Architectes de votre transformation numérique en Côte d'Ivoire</p>
+        <h1 style="font-size: 72px; color: #fff;">IVOIRE<br><span style="color:var(--primary)">DIGITAL</span></h1>
+        <p style="font-size: 28px; max-width: 800px;">Architectes de votre transformation numérique en Côte d'Ivoire. Nous transformons vos visions en réalités technologiques.</p>
     </section>
 
-    <section class="section" id="services">
+    <section class="section">
         <h2>Nos Solutions Digitales</h2>
         <div class="grid">
-            <div class="card"><i class="fa-solid fa-laptop-code"></i><h3>Web & Mobile</h3><p>Sites vitrines, E-commerce et applications sur mesure.</p></div>
-            <div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>Marketing Digital</h3><p>Référencement SEO et publicités ciblées.</p></div>
+            <div class="card"><i class="fa-solid fa-laptop-code"></i><h3>Développement Web</h3><p>Sites vitrines et E-commerce robustes avec paiement local.</p></div>
+            <div class="card"><i class="fa-solid fa-magnifying-glass-chart"></i><h3>Marketing Digital</h3><p>Référencement SEO et publicités ciblées (Ads).</p></div>
             <div class="card"><i class="fa-solid fa-palette"></i><h3>Design & Branding</h3><p>Identité visuelle, logos et chartes graphiques.</p></div>
-            <div class="card"><i class="fa-solid fa-users-gear"></i><h3>Community Management</h3><p>Gestion de vos réseaux sociaux pour bâtir une communauté.</p></div>
-            <div class="card"><i class="fa-solid fa-graduation-cap"></i><h3>Formation</h3><p>Coaching sur les outils digitaux pour dirigeants.</p></div>
+            <div class="card"><i class="fa-solid fa-users-gear"></i><h3>Community Management</h3><p>Gestion stratégique de vos réseaux sociaux.</p></div>
+            <div class="card"><i class="fa-solid fa-graduation-cap"></i><h3>Formation & Coaching</h3><p>Maîtrise des outils digitaux pour dirigeants.</p></div>
             <div class="card"><i class="fa-solid fa-pen-nib"></i><h3>Création de Contenu</h3><p>Rédaction, vidéos et visuels percutants.</p></div>
         </div>
     </section>
 
     <div class="stats">
-        <div><div class="stat-item">100+</div><p>Projets Réussis</p></div>
-        <div><div class="stat-item">95%</div><p>Satisfaction Client</p></div>
-        <div><div class="stat-item">24/7</div><p>Accompagnement</p></div>
+        <div><div class="stat-item">100+</div><p>PROJETS RÉUSSIS</p></div>
+        <div><div class="stat-item">95%</div><p>SATISFACTION CLIENT</p></div>
+        <div><div class="stat-item">24/7</div><p>ACCOMPAGNEMENT</p></div>
     </div>
 
-    <section class="section" style="text-align:center;">
-        <h2>Envie d'une identité unique ?</h2>
-        <a href="https://wa.me/votre_numero" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> Créer mon logo sur WhatsApp</a>
+    <section class="section" style="text-align:center; background: var(--card); border-radius: 20px;">
+        <h2>Envie d'une Identité Visuelle Unique ?</h2>
+        <p>Concevons ensemble le logo parfait pour votre entreprise.</p>
+        <a href="https://wa.me/votre_numero" class="whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> COMMANDER MON LOGO SUR WHATSAPP</a>
     </section>
 
     <footer>
