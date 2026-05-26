@@ -3,63 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivoire Digital | Transformation Numérique</title>
+    <title>Ivoire Digital | Excellence Numérique</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #020617; color: #fff; font-family: 'Inter', sans-serif; line-height: 1.5; }
+        :root { --bg: #020617; --card: #0f172a; --accent: #00d1ff; --text: #f8fafc; }
+        body { margin: 0; background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
         
-        /* En-tête */
-        header { padding: 40px 10%; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 24px; font-weight: 900; color: #00d1ff; letter-spacing: -1px; }
-        nav a { color: #fff; text-decoration: none; margin-left: 30px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 40px 8%; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo { font-size: 26px; font-weight: 900; letter-spacing: -1px; color: var(--accent); }
+        .menu a { color: var(--text); text-decoration: none; margin-left: 40px; font-size: 13px; text-transform: uppercase; font-weight: 700; opacity: 0.7; }
 
-        /* Hero section style "Document" */
-        .hero { padding: 100px 10%; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
-        .hero h1 { font-size: 80px; line-height: 1; margin-bottom: 20px; }
-        .hero p { font-size: 20px; color: #94a3b8; margin-bottom: 30px; }
-        .image-hero { width: 100%; height: 500px; background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000') center/cover; border-radius: 40px; }
+        /* Hero */
+        .hero { padding: 120px 8%; display: flex; justify-content: space-between; align-items: center; }
+        .hero-text h1 { font-size: 90px; line-height: 0.9; margin-bottom: 30px; }
+        .hero-text p { font-size: 20px; color: #94a3b8; max-width: 500px; }
+        .hero-img { width: 500px; height: 500px; background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000') center/cover; border-radius: 60px; }
 
-        /* Grilles Bento Modernes */
-        .services-section { padding: 100px 10%; }
-        .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .box { background: #0f172a; padding: 40px; border-radius: 30px; border: 1px solid #1e293b; }
-        .box h3 { color: #00d1ff; margin-bottom: 15px; }
+        /* Bento Grid Services */
+        .services { padding: 100px 8%; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .card { background: var(--card); padding: 50px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.05); }
+        .card h3 { color: var(--accent); font-size: 24px; margin-bottom: 20px; }
 
-        /* Pied de page dynamique */
-        footer { padding: 80px 10%; background: #000; display: flex; justify-content: space-between; border-top: 1px solid #1e293b; }
+        footer { padding: 80px 8%; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; }
     </style>
 </head>
 <body>
-    <header>
+    <nav>
         <div class="logo">IVOIRE DIGITAL</div>
-        <nav>
+        <div class="menu">
             <a href="index.html">Accueil</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-
+        </div>
+    </nav>
     <section class="hero">
-        <div>
-            <h1>TRANSFORMATION<br>DIGITALE</h1>
-            <p>Nous concevons l'avenir numérique des entreprises ivoiriennes avec une précision chirurgicale et un design d'exception.</p>
+        <div class="hero-text">
+            <h1>IVOIRE<br>DIGITAL</h1>
+            <p>Architectes de votre transformation numérique. Nous transformons vos visions en réalités technologiques avec un design d'exception.</p>
         </div>
-        <div class="image-hero"></div>
+        <div class="hero-img"></div>
     </section>
-
-    <section class="services-section">
-        <h2 style="font-size: 40px; margin-bottom: 40px;">Nos Expertises</h2>
-        <div class="bento-grid">
-            <div class="box"><h3>Web & Mobile</h3><p>Plateformes haute performance.</p></div>
-            <div class="box"><h3>Marketing 360</h3><p>Visibilité maximale et ROI.</p></div>
-            <div class="box"><h3>Branding</h3><p>Identité visuelle impactante.</p></div>
+    <section class="services">
+        <div class="grid">
+            <div class="card"><h3>Web & Mobile</h3><p>Plateformes haute performance pour votre croissance.</p></div>
+            <div class="card"><h3>Marketing 360</h3><p>Visibilité maximale et ROI mesurable.</p></div>
+            <div class="card"><h3>Design & Branding</h3><p>Identités visuelles qui marquent les esprits.</p></div>
         </div>
     </section>
-
     <footer>
-        <div><h3>IVOIRE DIGITAL</h3><p>Abidjan, CI</p></div>
-        <div><p>+225 07 00 00 00 00</p></div>
+        <p>© 2026 Ivoire Digital | Abidjan, Côte d'Ivoire</p>
+        <p>+225 07 00 00 00 00</p>
     </footer>
 </body>
 </html>
